@@ -1,18 +1,11 @@
 {
-    "python.linting.enabled": true,
-    "python.linting.mypyEnabled": true,
-    "python.linting.mypyArgs": [
-        "--follow-imports=silent",
-        "--show-column-numbers"
-    ],
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "editor.formatOnSave": true,
-    "python.formatting.provider": "none",
     "editor.codeActionsOnSave": {
-        "source.fixAll": true, // Ruff fixes.
-        "source.organizeImports": false // Skip isort, handled by Ruff
+        "source.fixAll": "always",
+        "source.organizeImports": "never"
     },
     "editor.rulers": [
         120
@@ -24,6 +17,7 @@
         "argmax",
         "argwhere",
         "astype",
+        "autoupdate",
         "blit",
         "Chebyshev",
         "dejavu",
@@ -45,6 +39,6 @@
         "vsync"
     ],
     "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter"
+        "editor.defaultFormatter": "charliermarsh.ruff"
     }
 }

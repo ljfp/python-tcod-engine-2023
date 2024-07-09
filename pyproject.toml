@@ -1,14 +1,4 @@
 # Project configuiration options for Python tools.
-[tool.black] # https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html#configuration-via-a-file
-target-version = ["py311"]
-line-length = 120
-
-[tool.isort] # https://pycqa.github.io/isort/docs/configuration/options.html
-py_version = "311"
-line_length = 120
-profile = "black"
-skip_gitignore = true
-
 [tool.mypy] # https://mypy.readthedocs.io/en/stable/config_file.html
 python_version = "3.11"
 files = ["."]
@@ -28,6 +18,10 @@ no_implicit_reexport = true
 strict_equality = true
 
 [tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
 # https://beta.ruff.rs/docs/rules/
 select = [
     "C90", # mccabe
@@ -70,5 +64,3 @@ ignore = [
     "D409",   # section-underline-matches-section-length
     "S311",   # suspicious-non-cryptographic-random-usage
 ]
-line-length = 120
-target-version = "py311"

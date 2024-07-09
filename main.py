@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 """Main script entry point."""
+
 import logging
 import sys
 import warnings
